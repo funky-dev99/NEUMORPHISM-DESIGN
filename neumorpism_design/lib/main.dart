@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home:  HomePage(),
     );
@@ -26,11 +26,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: Colors.grey.shade300,
       body: Center(
         child: Container(
-          child: Text('HELLO',
-            style: TextStyle(
-                color: Colors.black,
-                fontWeight: FontWeight.bold),),
-          padding: EdgeInsets.all(20),
+          padding: const EdgeInsets.all(20),
           height: 200,
           width: 200,
           decoration: BoxDecoration(
@@ -40,12 +36,12 @@ class HomePage extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: Colors.grey.shade500,
-                  offset: Offset(4, 4),
+                  offset: const Offset(4, 4),
                   blurRadius: 15,
                   spreadRadius: 1,
                 ),
 
-                BoxShadow(
+                const BoxShadow(
                   color: Colors.white,
                   offset: Offset(-4, -4),
                   blurRadius: 15,
@@ -53,6 +49,10 @@ class HomePage extends StatelessWidget {
                 ),
               ]
           ),
+          child: const Text('HELLO',
+            style: TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.bold),),
         ),
       ),
 
